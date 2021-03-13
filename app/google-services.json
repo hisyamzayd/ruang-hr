@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "831939585916",
+    "project_id": "ruanghr-9a764",
+    "storage_bucket": "ruanghr-9a764.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831939585916:android:ced9063a803dbf2af8e6f9",
+        "android_client_info": {
+          "package_name": "com.zaydhisyam.ruanghr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831939585916-budu61eub241ttf9j0htju4r8squa2mn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqsRlMucZmghNfjmb4jcXI9lQfbk-DuWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831939585916-budu61eub241ttf9j0htju4r8squa2mn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

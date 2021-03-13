@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".JobDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_nama_pekerjaan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Mobile Engineer - Android"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <ImageView
+            android:id="@+id/iv_foto_pekerjaan"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tv_nama_pekerjaan"
+            app:layout_constraintTop_toBottomOf="@id/tv_nama_pekerjaan"
+            android:src="@drawable/ic_ruanghr"
+            app:tint="@color/color_accent"
+            android:scaleType="fitCenter"
+            android:background="@color/color_primary"/>
+
+        <TextView
+            android:id="@+id/tv_nama_perusahaan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintStart_toEndOf="@id/iv_foto_pekerjaan"
+            app:layout_constraintTop_toTopOf="@id/iv_foto_pekerjaan"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="PT Dapur Rumah Sejahtera"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tv_lokasi_pekerjaan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/iv_foto_pekerjaan"
+            app:layout_constraintTop_toBottomOf="@id/tv_nama_perusahaan"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Surabaya, East Java, Indonesia"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tv_timestamp_dan_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_lokasi_pekerjaan"
+            tools:text="1 month ago (updated)"/>
+
+        <TextView
+            android:id="@+id/tv_jumlah_pelamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            app:layout_constraintStart_toEndOf="@id/tv_timestamp_dan_update"
+            app:layout_constraintTop_toTopOf="@id/tv_timestamp_dan_update"
+            tools:text="- 2 applicants"
+            android:textColor="@color/color_accent"/>
+
+        <TextView
+            android:id="@+id/tv_jumlah_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            app:layout_constraintStart_toEndOf="@id/tv_jumlah_pelamar"
+            app:layout_constraintTop_toTopOf="@id/tv_jumlah_pelamar"
+            tools:text="- 3 views"
+            android:textColor="@color/color_primary_dark"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_apply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_timestamp_dan_update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:backgroundTint="@color/color_primary_dark"
+            android:text="apply" />
+
+        <TextView
+            android:id="@+id/tv_batas_waktu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_apply"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            tools:text="APPLICATIONS END IN 3 DAYS"
+            android:textColor="@android:color/holo_red_light"/>
+
+        <View
+            android:id="@+id/border1"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_batas_waktu"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/jobDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/border1"
+            android:text="Job Description"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_deskripsi_pekerjaan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/jobDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
+
+        <View
+            android:id="@+id/border2"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_pekerjaan"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/employment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/border2"
+            android:text="Employment"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_detail_pekerjaan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/employment"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Full-time"/>
+
+        <View
+            android:id="@+id/border3"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_pekerjaan"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/border3"
+            android:text="Salary"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_deskripsi_gaji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/salary"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Negotiable"/>
+
+        <View
+            android:id="@+id/border4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tv_deskripsi_gaji"
+            app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_gaji"
+            app:layout_constraintEnd_toEndOf="@id/tv_deskripsi_gaji"
+            android:background="@android:color/darker_gray"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/border4"
+            app:layout_constraintTop_toBottomOf="@id/border4"
+            app:layout_constraintEnd_toEndOf="@id/border4"
+            app:backgroundTint="@color/color_primary_dark"
+            android:text="edit" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/btn_edit"
+            app:layout_constraintTop_toBottomOf="@id/btn_edit"
+            app:layout_constraintEnd_toEndOf="@id/btn_edit"
+            app:backgroundTint="@android:color/holo_red_dark"
+            android:text="delete"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

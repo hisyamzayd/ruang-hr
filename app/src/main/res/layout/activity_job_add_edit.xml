@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".JobAddEditActivity">
+
+        <TextView
+            android:id="@+id/activityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tambah Data"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nama_pekerjaan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/activityTitle"
+            app:layout_constraintTop_toBottomOf="@id/activityTitle"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Pekerjaan"
+                android:inputType="textCapWords"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nama_perusahaan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/til_nama_pekerjaan"
+            app:layout_constraintTop_toBottomOf="@id/til_nama_pekerjaan"
+            app:layout_constraintEnd_toEndOf="@id/til_nama_pekerjaan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Perusahaan"
+                android:inputType="textCapWords"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_lokasi_pekerjaan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/til_nama_perusahaan"
+            app:layout_constraintTop_toBottomOf="@id/til_nama_perusahaan"
+            app:layout_constraintEnd_toEndOf="@id/til_nama_perusahaan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lokasi Pekerjaan (Kota, Provinsi)"
+                android:inputType="textCapWords"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_email_perusahaan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/til_lokasi_pekerjaan"
+            app:layout_constraintTop_toBottomOf="@id/til_lokasi_pekerjaan"
+            app:layout_constraintEnd_toEndOf="@id/til_lokasi_pekerjaan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Perusahaan"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_deskripsi_pekerjaan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/til_email_perusahaan"
+            app:layout_constraintTop_toBottomOf="@id/til_email_perusahaan"
+            app:layout_constraintEnd_toEndOf="@id/til_email_perusahaan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:hint="Deskripsi Pekerjaan"
+                android:gravity="start"
+                android:inputType="textMultiLine"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_detail_pekerjaan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/til_deskripsi_pekerjaan"
+            app:layout_constraintTop_toBottomOf="@id/til_deskripsi_pekerjaan"
+            app:layout_constraintEnd_toEndOf="@id/til_deskripsi_pekerjaan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Detail Pekerjaan (Full-time/Part-time/Internship)"
+                android:inputType="textCapWords"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_deskripsi_gaji"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/til_detail_pekerjaan"
+            app:layout_constraintTop_toBottomOf="@id/til_detail_pekerjaan"
+            app:layout_constraintEnd_toEndOf="@id/til_detail_pekerjaan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Deskripsi Gaji"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/iv_batas_waktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            app:layout_constraintStart_toStartOf="@id/til_deskripsi_gaji"
+            app:layout_constraintTop_toTopOf="@id/tv_batas_waktu"
+            app:layout_constraintBottom_toBottomOf="@id/tv_batas_waktu"
+            android:src="@drawable/ic_calendar"
+            android:background="@drawable/rounded_rectangle_with_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:elevation="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_batas_waktu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="16dp"
+            android:padding="12dp"
+            app:layout_constraintStart_toEndOf="@id/iv_batas_waktu"
+            app:layout_constraintTop_toBottomOf="@id/til_deskripsi_gaji"
+            app:layout_constraintEnd_toEndOf="@id/til_deskripsi_gaji"
+            android:background="@drawable/stroked_rectangle"
+            android:gravity="center"
+            android:text="Batas Waktu"
+            android:textSize="16sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_foto_pekerjaan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/iv_batas_waktu"
+            app:layout_constraintTop_toBottomOf="@id/tv_batas_waktu"
+            app:layout_constraintEnd_toEndOf="@id/tv_batas_waktu"
+            app:backgroundTint="@color/color_primary_dark"
+            android:text="upload foto pekerjaan" />
+
+        <ImageView
+            android:id="@+id/iv_foto_pekerjaan"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/btn_foto_pekerjaan"
+            app:layout_constraintTop_toBottomOf="@id/btn_foto_pekerjaan"
+            app:layout_constraintEnd_toEndOf="@id/btn_foto_pekerjaan"
+            android:src="@drawable/ic_ruanghr"
+            app:tint="@color/color_accent"
+            android:scaleType="fitCenter"
+            android:background="@color/color_primary"/>
+
+        <View
+            android:id="@+id/border1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/btn_foto_pekerjaan"
+            app:layout_constraintTop_toBottomOf="@id/iv_foto_pekerjaan"
+            app:layout_constraintEnd_toEndOf="@id/btn_foto_pekerjaan"
+            android:background="@android:color/darker_gray"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/border1"
+            app:layout_constraintTop_toBottomOf="@id/border1"
+            app:layout_constraintEnd_toEndOf="@id/border1"
+            app:backgroundTint="@color/color_primary_dark"
+            tools:text="tambah" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

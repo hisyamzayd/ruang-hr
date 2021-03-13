@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/iv_foto_pekerjaan"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_ruanghr"
+        app:tint="@color/color_accent"
+        android:scaleType="fitCenter"
+        android:background="@color/color_primary"/>
+
+    <TextView
+        android:id="@+id/tv_nama_pekerjaan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintStart_toEndOf="@id/iv_foto_pekerjaan"
+        app:layout_constraintTop_toTopOf="@id/iv_foto_pekerjaan"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Mobile Developer"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tv_nama_perusahaan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/tv_nama_pekerjaan"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama_pekerjaan"
+        app:layout_constraintEnd_toEndOf="@id/tv_nama_pekerjaan"
+        android:text="PT Dapur Rumah Sejahtera"
+        android:textColor="@android:color/black"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tv_lokasi_pekerjaan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/tv_nama_perusahaan"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama_perusahaan"
+        app:layout_constraintEnd_toEndOf="@id/tv_nama_perusahaan"
+        android:text="Surabaya, East Java, Indonesia"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <View
+        android:id="@+id/border1"
+        android:layout_width="56dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_lokasi_pekerjaan"
+        app:layout_constraintTop_toBottomOf="@id/tv_lokasi_pekerjaan"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tv_timestamp_dan_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/border1"
+        app:layout_constraintTop_toBottomOf="@id/border1"
+        android:text="1 month ago (updated)"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_jumlah_pelamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintStart_toEndOf="@id/tv_timestamp_dan_update"
+        app:layout_constraintTop_toTopOf="@id/tv_timestamp_dan_update"
+        android:text="- 2 applicants"
+        android:textSize="12sp"
+        android:textColor="@color/color_accent"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tv_timestamp_dan_update"
+        app:layout_constraintTop_toBottomOf="@id/tv_timestamp_dan_update"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/darker_gray"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
